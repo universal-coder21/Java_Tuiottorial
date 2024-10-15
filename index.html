@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tutorial Videos</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .video-card {
+            margin-bottom: 2rem;
+        }
+
+        .custom-shape-divider-bottom-1697393837 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .custom-shape-divider-bottom-1697393837 svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+
+        .custom-shape-divider-bottom-1697393837 .shape-fill {
+            fill: #FFFFFF;
+        }
+
+        .video-wrapper {
+            position: relative;
+        }
+
+        .video-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 5px;
+            background-color: #007bff;
+            transition: width 0.3s;
+        }
+
+        .fullscreen-btn {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        @media (min-width: 992px) {
+            .video-wrapper {
+                height: 0;
+                padding-bottom: 56.25%;
+                /* 16:9 aspect ratio */
+            }
+
+            .video-wrapper iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Tutorials</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#videos">Videos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="bg-primary text-white text-center py-5 position-relative">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">Welcome to JAVA  Series</h1>
+            <!-- <p class="lead mb-4">Enhance your skills with our professional video tutorials</p> -->
+        </div>
+        <div class="custom-shape-divider-bottom-1697393837">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+            preserveAspectRatio="none">
+            <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"></path>
+        </svg>
+    </div>
+</header>
+<pre></pre>
+<!-- <button class="btn btn-primary mt-3" id="scrollButton">Go to Last Scroll</button> -->
+    <!-- Video Grid -->
+    <section id="videos" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Tutorial Videos</h2>
+            <div class="row" id="videoGrid">
+                <!-- Video cards will be dynamically inserted here -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <!-- 1 -->
+                            <iframe src="https://www.youtube.com/embed/yRpLlJmRo2w?si=1U_UtmWpgGlZd4MF"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                          
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">INRTRODUCTION</h3>
+                            <p class="card-text">Introduction</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/LusTv0RlnSU?si=LHkaagklqo18kXKt"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                   
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">VARIABLE</h3>
+                            <p class="card-text">DATA TYPES</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/I5srDu75h_M?si=p0-3CgP55GUqyhNh"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                           
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/0r1SfRoLuzU?si=7LPtjmbMgRtfX0Pw"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                         
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/GjHNGM7KN3w?si=65wTls1KFLFwA5Bz"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                          
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/Dr4PpNa7AYo?si=9xRswipecNOuU32Z"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                          
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/qcSz4ef9UHA?si=H__ZDBclxgbZ7Aag"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                           
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8 -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/pFPZ83mgH00?si=GV9KuxqpKhYLqA17"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                           
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9 -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/bQssdSrSGNE?si=9RPkwhOzI_pIIaGV"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10 -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/NTHVTY6w2Co?si=Z8zgC2H7ImU1qSA2"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11 -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/18Zt5I4S45o?si=qyi4Feha_TC_paE9"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12 -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/vCRD36bG8xQ?si=84GjCCKsMyDu7BV0"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/ZLDwskEhIFg?si=dn8yh60Crs-BlE2U"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 14 -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/Oud4alVQU4s?si=DZilPG7ASiUsV2d4"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 15 -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/OSoO8eCEEC8?si=V3sqTmnPIAViquUo"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 16 -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/PkJIc5tBRUE?si=YCcPm5PWMTD50exy"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 17 -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/5Boqfjissv0?si=-If9UOLwud6XaihS"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 18 -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/u-HgzgYe8KA?si=tjRu73NeUXpvwFCQ"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 19 -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/xZykmhcWGuY?si=oAW4bQ3r9rlgKG9N"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 20 -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/bRs6E_SL2Tk?si=ZxJUC4204keCmHbZ"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/tRj4VlVTat8?si=DQfw0qDy-rciWFDp"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/unxAnJBy12Q?si=a-mZM8w41ecSf7iC"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/QXum8HQd_l4?si=Tph8GOLFGx9rEMye"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/bSrm9RXwBaI?si=Bf9hK72bmJksRugK"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/liFyhzZl9uw?si=8hg1SIl0mWAmnQi7"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/VphowcSkBX4?si=ye7lC9_UrCn--VoX"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/oAja8-Ulz6o?si=KXp99GcwBrJfPyUz"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 28 -->
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/t7YaoQOFXzk?si=HK2xv_85OhhWs2c2"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/cL4gHVuFOvk?si=8ySGP03cwPfrw-Un"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/va_6RmSrKCg?si=STYSn19pjXcauofb"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/-DzowlcaUmE?si=EROlbU3ihHKxfoSm"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/qAeitQWjNNg?si=1DTjRUrwRAsq6tpD"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/eJiGN1h8XzM?si=mTrkjaTbvQ9e1jl8"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/WeF3_nk-UqY?si=TjU7TpuixiglKLdO"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/KDZ_IXvpMG4?si=gY3vIgmTlGM_jeoP"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/rTRcntABSZ4?si=g2hOJYFjxU4i7D-r"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/m9zawMC6QAI?si=NomCuWBwrOHDaYKL"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/59fUtYYz7ZU?si=rCN_mUfrJROVHxYV"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="col-12 video-card">
+                    <div class="card shadow-sm">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube.com/embed/oAja8-Ulz6o?si=KXp99GcwBrJfPyUz"
+                                title="Tutorial Video ${i}" allowfullscreen></iframe>
+                            <div class="video-progress" data-video-id="${i}"></div>
+                            <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i
+                                    class="fas fa-expand"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title"></h3>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div> -->
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">About Our Tutorials</h2>
+            <p class="lead text-center">Our tutorial series is designed to help you master new skills quickly and
+                efficiently. With expert instructors and high-quality content, you'll be on your way to success in no
+                time!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 My Tutorial Series. All rights reserved.</p>
+            <div class="mt-3">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Generate video cards
+        <!-- const videoGrid = document.getElementById('videoGrid');
+        for (let i = 1; i <= 26; i++) {
+            const card = document.createElement('div');
+            card.className = 'col-12 video-card';
+            card.innerHTML = `
+                <div class="card shadow-sm">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/yRpLlJmRo2w?si=1U_UtmWpgGlZd4MF" title="Tutorial Video ${i}" allowfullscreen></iframe>
+                        <div class="video-progress" data-video-id="${i}"></div>
+                        <button class="fullscreen-btn" onclick="toggleFullScreen(this)"><i class="fas fa-expand"></i></button>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Tutorial ${i}</h3>
+                        <p class="card-text">A detailed description of Tutorial ${i}. This video covers important concepts and practical examples.</p>
+                    </div>
+                </div>
+            `;
+            videoGrid.appendChild(card);
+        } -->
+
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Function to toggle fullscreen
+        function toggleFullScreen(button) {
+            const videoWrapper = button.closest('.video-wrapper');
+            const iframe = videoWrapper.querySelector('iframe');
+
+            if (!document.fullscreenElement) {
+                if (videoWrapper.requestFullscreen) {
+                    videoWrapper.requestFullscreen();
+                } else if (videoWrapper.mozRequestFullScreen) { // Firefox
+                    videoWrapper.mozRequestFullScreen();
+                } else if (videoWrapper.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    videoWrapper.webkitRequestFullscreen();
+                } else if (videoWrapper.msRequestFullscreen) { // IE/Edge
+                    videoWrapper.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { // Firefox
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { // IE/Edge
+                    document.msExitFullscreen();
+                }
+            }
+        }
+
+        // Function to save video progress
+        function saveVideoProgress(videoId, progress) {
+            localStorage.setItem(`video_${videoId}_progress`, progress);
+            updateProgressBar(videoId, progress);
+        }
+
+        // Function to load video progress
+        function loadVideoProgress(videoId) {
+            return localStorage.getItem(`video_${videoId}_progress`) || 0;
+        }
+
+        // Function to update progress bar
+        function updateProgressBar(videoId, progress) {
+            const progressBar = document.querySelector(`.video-progress[data-video-id="${videoId}"]`);
+            if (progressBar) {
+                progressBar.style.width = `${progress}%`;
+            }
+        }
+
+        // Function to handle video playback
+        function handleVideoPlayback(iframe) {
+            const videoId = iframe.closest('.video-wrapper').querySelector('.video-progress').dataset.videoId;
+            const player = new YT.Player(iframe, {
+                events: {
+                    'onReady': function (event) {
+                        const savedProgress = loadVideoProgress(videoId);
+                        event.target.seekTo(savedProgress);
+                        updateProgressBar(videoId, (savedProgress / event.target.getDuration()) * 100);
+                    },
+                    'onStateChange': function (event) {
+                        if (event.data == YT.PlayerState.PLAYING) {
+                            const updateInterval = setInterval(function () {
+                                const currentTime = event.target.getCurrentTime();
+                                const duration = event.target.getDuration();
+                                const progress = (currentTime / duration) * 100;
+                                saveVideoProgress(videoId, currentTime);
+                                updateProgressBar(videoId, progress);
+                            }, 1000);
+                            event.target.updateInterval = updateInterval;
+                        } else if (event.data == YT.PlayerState.PAUSED || event.data == YT.PlayerState.ENDED) {
+                            clearInterval(event.target.updateInterval);
+                        }
+                    }
+                }
+            });
+        }
+
+        // Load YouTube API
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Initialize video players when YouTube API is ready
+        function onYouTubeIframeAPIReady() {
+            document.querySelectorAll('iframe').forEach(handleVideoPlayback);
+        }
+
+        // Handle "Explore Videos" button click
+        document.querySelector('.explore-videos').addEventListener('click', function (e) {
+            e.preventDefault();
+            const videoSection = document.querySelector('#videos');
+            videoSection.scrollIntoView({ behavior: 'smooth' });
+
+            // Find the video with the most progress
+            let maxProgress = 0;
+            let maxProgressVideoId = null;
+            for (let i = 1; i <= 26; i++) {
+                const progress = parseFloat(loadVideoProgress(i));
+                if (progress > maxProgress) {
+                    maxProgress = progress;
+                    maxProgressVideoId = i;
+                }
+            }
+
+            // If a video was in progress, scroll to it
+            if (maxProgressVideoId) {
+                setTimeout(() => {
+                    const videoCard = document.querySelector(`.video-progress[data-video-id="${maxProgressVideoId}"]`).closest('.video-card');
+                    videoCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 500); // Wait for the main scroll to finish
+            }
+        });
+
+
+
+          // Save scroll position before leaving the page
+    window.addEventListener("beforeunload", function () {
+        localStorage.setItem("scrollPosition", window.scrollY);
+      });
+  
+      // Button click event to scroll to the last saved position
+      document.getElementById("scrollButton").addEventListener("click", function () {
+        const lastScrollPosition = localStorage.getItem("scrollPosition");
+        if (lastScrollPosition) {
+          window.scrollTo(0, parseInt(lastScrollPosition, 10));
+        }
+      });
+  
+      // Automatically scroll to the last saved position when page loads
+      window.addEventListener("load", function () {
+        const lastScrollPosition = localStorage.getItem("scrollPosition");
+        if (lastScrollPosition) {
+          window.scrollTo(0, parseInt(lastScrollPosition, 10));
+        }
+      });
+    </script>
+</body>
+
+</html>
